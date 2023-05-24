@@ -20,7 +20,15 @@ function App() {
       <p>This is a photo gallery made using redux toolkit and redux thunk.</p>
       <hr />
       <div className="Gallery">
-        {/* {photos.map((photo) => <img key={} />)} */}
+        {photos.map((photo) => (
+          <img
+            key={photo.id}
+            alt={photo.alt_description}
+            src={photo.urls.small_s3}
+            width="400"
+            height="400"
+          />
+        ))}
       </div>
       <button>VIEW MORE</button>
     </div>
